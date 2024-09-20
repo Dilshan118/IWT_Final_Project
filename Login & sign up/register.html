@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container" id="signup">
+      <h1 class="form-title">Register</h1>
+
+      <form action="" method="post">
+
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" name="user-name" id="user-name" placeholder="User Name" required>
+          <label for="user-name">User Name</label>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" name="email" id="email" placeholder="Email" required>
+          <label for="email">Email</label>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" name="password" id="password" placeholder="Password" required>
+          <label for="password">Password</label>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="checkpassword" name="checkpassword" id="checkpassword" placeholder="Confirm Password" required>
+          <label for="Confirm password">Confirm Password</label>
+        </div>
+
+        <input type="submit" class="btn" value="Sign Up" name="signup">
+      </form>
+
+      <p class="or">
+        ------------or-------------
+      </p>
+
+      <div class="icon">
+        <i class="fab fa-google"></i>
+        <i class="fab fa-facebook"></i>
+      </div>
+
+      <div class="links"></div>
+        <p>Already Have Account ?</p>
+        <button id="signInButton">Sign In</button>
+      </div>
+    </div>
+  </body>
+</html>
