@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parking Inquiry Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <div class="container" id="inquiry">
+      <h1 class="form-title">Parking Inquiry</h1>
+
+      <form id="inquiry-form" onsubmit="handleSubmit(event)">
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" name="first-name" id="first-name" placeholder="First Name" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" name="last-name" id="last-name" placeholder="Last Name" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" name="email" id="email" placeholder="Email" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-phone"></i>
+          <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-car"></i>
+          <input type="text" name="vehicle" id="vehicle" placeholder="Vehicle Details" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-calendar"></i>
+          <input type="date" name="date" id="date" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-clock"></i>
+          <input type="time" name="time" id="time" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-comments"></i>
+          <textarea name="comments" id="comments" rows="4" placeholder="Additional Comments"></textarea>
+        </div>
+
+        <input type="submit" class="btn" value="Submit Inquiry" name="inquiry">
+      </form>
+
+      <p class="or">------------ or ------------</p>
+
+      <div class="icon">
+        <i class="fab fa-google"></i>
+        <i class="fab fa-facebook"></i>
+      </div>
+
+      <p class="links">For more information, visit our <a href="#">Help Center</a></p>
+    </div>
+
+    <!-- Preview Section -->
+    <div class="container" id="preview">
+      <h2>Inquiry Preview</h2>
+
+      <!-- Updated Preview Details -->
+      <div id="preview-details">
+        <p>First Name: <input type="text" id="preview-first-name" readonly></p>
+        <p>Last Name: <input type="text" id="preview-last-name" readonly></p>
+        <p>Email: <input type="text" id="preview-email" readonly></p>
+        <p>Phone: <input type="text" id="preview-phone" readonly></p>
+        <p>Vehicle: <input type="text" id="preview-vehicle" readonly></p>
+        <p>Date: <input type="text" id="preview-date" readonly></p>
+        <p>Time: <input type="text" id="preview-time" readonly></p>
+        <p>Comments: <input type="text" id="preview-comments" readonly></p>
+      </div>
+
+      <div class="actions">
+        <button class="btn edit-btn" onclick="editForm()">Edit</button>
+        <button class="btn delete-btn" onclick="deleteForm()">Delete</button>
+        <button class="btn finalize-btn" onclick="finalizeInquiry()">Finalize Inquiry</button>
+      </div>
+
+      <!-- Finalization Message -->
+      <div id="finalize-message" style="display:none; margin-top: 10px;">
+        <p style="font-weight: bold;">Your inquiry has been finalized and saved!</p>
+      </div>
+    </div>
+
+    <script>
+      // Handle form submission and show preview
+      function handleSubmit(event) {
+        event.preventDefault();
+
+        // Get form values
+        const firstName = document.getElementById('first-name').value;
+        const lastName = document.getElementById('last-name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const vehicle = document.getElementById('vehicle').value;
+        const date = document.getElementById('date').value;
+        const time = document.getElementById('time').value;
+        const comments = document.getElementById('comments').value;
+
+        // Update the preview section
+        document.getElementById('preview-first-name').value = firstName;
+        document.getElementById('preview-last-name').value = lastName;
+        document.getElementById('preview-email').value = email;
+        document.getElementById('preview-phone').value = phone;
+        document.getElementById('preview-vehicle').value = vehicle;
+        document.getElementById('preview-date').value = date;
+        document.getElementById('preview-time').value = time;
+        document.getElementById('preview-comments').value = comments;
+
+        // Show the preview section
+        document.getElementById('preview').style.display = 'block';
+
+        // Hide finalize message in case it was shown
+        document.getElementById('finalize-message').style.display = 'none';
+      }
+
+      // Edit form values
+      function editForm() {
+        // Get the preview values and set them back into the form fields
+        document.getElementById('first-name').value = document.getElementById('preview-first-name').value;
+        document.getElementById('last-name').value = document.getElementById('preview-last-name').value;
+        document.getElementById('email').value = document.getElementById('preview-email').value;
+        document.getElementById('phone').value = document.getElementById('preview-phone').value;
+        document.getElementById('vehicle').value = document.getElementById('preview-vehicle').value;
+        document.getElementById('date').value = document.getElementById('preview-date').value;
+        document.getElementById('time').value = document.getElementById('preview-time').value;
+        document.getElementById('comments').value = document.getElementById('preview-comments').value;
+
+        // Hide the preview section after editing
+        document.getElementById('preview').style.display = 'none';
+      }
+
+      // Delete the form values
+      function deleteForm() {
+        // Clear the form fields
+        document.getElementById('inquiry-form').reset();
+
+        // Clear the preview section
+        document.getElementById('preview-details').querySelectorAll('input').forEach(input => input.value = '');
+
+        // Hide the preview section after deleting
+        document.getElementById('preview').style.display = 'none';
+
+        // Hide finalize message
+        document.getElementById('finalize-message').style.display = 'none';
+      }
+
+      // Finalize the inquiry
+      function finalizeInquiry() {
+        // Disable all form fields to lock the data
+        const formFields = document.getElementById('inquiry-form').querySelectorAll('input, textarea');
+        formFields.forEach(field => field.disabled = true);
+
+        // Show a finalization message
+        document.getElementById('finalize-message').style.display = 'block';
+
+        // Hide the edit and delete buttons after finalizing
+        document.querySelector('.edit-btn').style.display = 'none';
+        document.querySelector('.delete-btn').style.display = 'none';
+        document.querySelector('.finalize-btn').style.display = 'none';
+      }
+
+      // Initially hide the preview section
+      document.getElementById('preview').style.display = 'none';
+    </script>
+  </body>
+</html>
