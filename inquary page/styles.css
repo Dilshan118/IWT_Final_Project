@@ -4,17 +4,33 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
 body {
-  background: #f4f4f4;
+  background-image: url('Images/image4.webp'); /* Relative path to your local image */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Keeps the background fixed when scrolling */
   color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
 }
 
+
+/* Flex container to align the form and preview side by side */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Style for the form and the preview container */
 .container {
-  background: #fff;
-  width: 90%;
-  max-width: 500px;
-  margin: 50px;
+  background: rgba(255, 255, 255, 0.9);
+  width: 48%; /* Make each container take 48% of the available width */
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -25,7 +41,7 @@ body {
   font-weight: 600;
   text-align: center;
   margin-bottom: 1.5rem;
-  color:rgb(34, 9, 9);
+  color: rgb(34, 9, 9);
 }
 
 .input-group {
@@ -63,7 +79,7 @@ textarea:focus {
 label {
   position: absolute;
   left: 2.5rem;
-  top:rem;
+  top: 0;
   color: #888;
   transition: 0.3s ease;
   font-size: 0.9rem;
@@ -125,6 +141,7 @@ label {
 .links a:hover {
   text-decoration: underline;
 }
+
 .actions {
   display: flex;
   justify-content: space-between;
@@ -158,4 +175,20 @@ label {
 
 .actions .btn:hover {
   opacity: 0.9; /* Slightly reduces button opacity on hover */
+}
+
+/* Ensure preview content has the same styling as the form */
+#preview-details input {
+  background: #f9f9f9;
+  padding: 0.75rem;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+
+#preview-details p {
+  margin-bottom: 0.75rem;
+  color: #333;
+  font-size: 1rem;
 }

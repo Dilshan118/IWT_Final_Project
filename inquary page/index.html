@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parking Inquiry Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="JS_script.js"></script>
+  </head>
+
+  <body>
+    <div class="main-content">
+    <div class="container" id="inquiry">
+      <h1 class="form-title">Parking Inquiry</h1>
+
+      <form id="inquiry-form" onsubmit="handleSubmit(event)">
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" name="first-name" id="first-name" placeholder="First Name" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" name="last-name" id="last-name" placeholder="Last Name" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" name="email" id="email" placeholder="Email" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-phone"></i>
+          <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-car"></i>
+          <input type="text" name="vehicle" id="vehicle" placeholder="Vehicle Details" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-calendar"></i>
+          <input type="date" name="date" id="date" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-clock"></i>
+          <input type="time" name="time" id="time" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-comments"></i>
+          <textarea name="comments" id="comments" rows="4" placeholder="Additional Comments"></textarea>
+        </div>
+
+        <input type="submit" class="btn" id="submit" value="Submit Inquiry" name="inquiry">
+      </form>
+
+      <p class="or">------------ or ------------</p>
+
+      <div class="icon">
+        <i class="fab fa-google"></i>
+        <i class="fab fa-facebook"></i>
+      </div>
+
+      <p class="links">For more information, visit our <a href="#">Help Center</a></p>
+    </div>
+
+    <!-- Preview Section -->
+    <div class="container" id="preview">
+      <h2>Inquiry Preview</h2>
+
+      <!-- Updated Preview Details -->
+      <div id="preview-details">
+        <p>First Name: <input type="text" id="preview-first-name" readonly></p>
+        <p>Last Name: <input type="text" id="preview-last-name" readonly></p>
+        <p>Email: <input type="text" id="preview-email" readonly></p>
+        <p>Phone: <input type="text" id="preview-phone" readonly></p>
+        <p>Vehicle: <input type="text" id="preview-vehicle" readonly></p>
+        <p>Date: <input type="text" id="preview-date" readonly></p>
+        <p>Time: <input type="text" id="preview-time" readonly></p>
+        <p>Comments: <input type="text" id="preview-comments" readonly></p>
+      </div>
+
+      <div class="actions">
+        <button class="btn edit-btn" onclick="editForm()">Edit</button>
+        <button class="btn delete-btn" onclick="deleteForm()">Delete</button>
+        <button class="btn finalize-btn" onclick="finalizeInquiry()">Finalize Inquiry</button>
+      </div>
+
+      <!-- Finalization Message -->
+      <div id="finalize-message" style="display:none; margin-top: 10px;">
+        <p style="font-weight: bold;">Your inquiry has been finalized and saved!</p>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
