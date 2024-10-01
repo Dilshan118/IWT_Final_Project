@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/src/pkgimages/pkgbk.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif; 
+}
+
+.package-container {
+    background-color: rgba(255, 255, 255, 0.9); 
+    width: 80%;
+    max-width: 1000px; 
+    height: auto;
+    padding: 40px;
+    margin: 20px auto; 
+    border-radius: 20px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3); 
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.uph {
+    animation: slideIn 1s ease-in-out;
+    font-family: 'Times New Roman', Times, serif;
+    color: #0056b3; /* Darker shade of blue */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add slight shadow for depth */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.bttnl {
+    background-color: rgb(33, 33, 132);
+    color: white;
+    border: none;
+    padding: 15px; 
+    border-radius: 5px;
+    font-size: 1.2rem; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; 
+    flex: 1;
+    margin: 0 10px; 
+}
+
+.bttnl:hover {
+    background-color: #0e0235;
+    transform: scale(1.05); 
+}
+
+.pkg {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    overflow: visible;
+    background-color: rgba(204, 204, 204, 0.8); 
+    border-radius: 10px; /* rounded corners */
+    padding: 15px; 
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.pkgimg {
+    border: 3px solid #333; /* border thickness */
+    border-radius: 10px; /* Rounded corners */
+    padding: 5px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover; /* image fit */
+    margin: 10px 20px 10px 10px;
+}
+
+.pkgdes {
+    flex: 1;
+    padding-left: 15px; 
+    color: #333; /* Dark text for better readability */
+}
+
+.pkgh {
+    font-size: 1.8rem; 
+    font-weight: bold;
+    color: #0a1f7e; /* Darker shade of blue for package headings */
+}
+
+.pkgdes1,
+.pkgdes2 {
+    font-size: 1.2rem; 
+    color: #555; /* Lighter shade for descriptions */
+}
+
+.hori {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-top: 30px;
+}
