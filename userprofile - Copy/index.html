@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="/styles/regheader.css">
+    <link rel="stylesheet" href="/styles/regfooter.css">
+    <link rel="stylesheet" href="/styles/registration.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="pps-header">
+        <div class="pps-container">
+            <div class="pps-logo">Park Pal Swift</div>
+            <nav class="pps-nav">
+                <ul class="pps-nav-list">
+                    <li><a href="#about-us" class="pps-nav-link">About Us</a></li>
+                    <li><a href="#package-details" class="pps-nav-link">Package Details</a></li>
+                    <li><a href="#contact-us" class="pps-nav-link">Contact Us</a></li>
+                    <li><a href="#reservation" class="pps-nav-link">Reservation</a></li>
+                    <li><a href="#vehicle-registration" class="pps-nav-link">Vehicle Registration</a></li>
+                    <li><a href="#payment" class="pps-nav-link">Payment</a></li>
+                    <li><a href="#login" class="pps-nav-btn">Login</a></li>
+                    <li><a href="#profile" class="pps-nav-btn">User Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <div class="registration-container">
+            <h2>User Registration</h2>
+            <form action="php/index.php" method="post" onsubmit="return checkPassword()">
+                <!-- Form Inputs -->
+                <div class="input-group">
+                    <label for="uid">User ID :</label>
+                    <input type="number" name="uid" class="uid" disabled>
+                </div>
+
+                <div class="input-group">
+                    <label for="uname">User Name :</label>
+                    <input type="text" name="uname" class="uname">
+                </div>
+
+                <div class="input-group">
+                    <label for="fname">Full Name :</label>
+                    <input type="text" name="fname" class="fname">
+                </div>
+
+                <div class="input-group">
+                    <label for="gender">Gender :</label>
+                    <input type="radio" name="gender" class="gender" value="Male">Male
+                    <input type="radio" name="gender" class="gender" value="Female">Female
+                </div>
+
+                <div class="input-group">
+                    <label for="mobile">Mobile Number :</label>
+                    <input type="tel" name="mobile" class="mobile" placeholder="123-1234567">
+                </div>
+
+                <div class="input-group">
+                    <label for="mail">E-mail :</label>
+                    <input type="email" name="mail" class="mail" placeholder="abc@gmail.com">
+                </div>
+
+                <div class="input-group">
+                    <label for="NIC">NIC :</label>
+                    <input type="text" name="NIC" class="NIC">
+                </div>
+
+                <div class="input-group">
+                    <label for="address">Address :</label>
+                    <textarea name="address" class="address"></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="dob">DOB :</label>
+                    <input type="date" name="dob" class="dob">
+                </div>
+
+                <div class="input-group">
+                    <label for="pw">Password</label>
+                    <input type="password" id="pw" name="pw" class="pw">
+                </div>
+
+                <div class="input-group">
+                    <label for="repw">Re-enter Password</label>
+                    <input type="password" name="repw" id="repw" class="repw">
+                </div>
+
+                <div class="input-group">
+                    <input type="checkbox" name="privacy" id="privacy" class="privacy" onclick="enableButton()">
+                    <label for="privacy">Accept Privacy & Policy</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="submit" id="Submit" name="Submit" class="Submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="pps-footer-dark">
+        <div class="pps-footer-container">
+            <div class="pps-footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="pps-footer-info">
+                <div class="pps-footer-item">
+                    <h3>Hotline 24 Hours</h3>
+                    <p>+94 779 560 462</p>
+                </div>
+                <div class="pps-footer-item">
+                    <h3>Send us a Mail</h3>
+                    <p>matrix@slmatrix.com</p>
+                </div>
+                <div class="pps-footer-item">
+                    <h3>Our Location</h3>
+                    <p>No 850, Bulugaha Junction, Kelaniya, Sri Lanka</p>
+                </div>
+            </div>
+            <div class="pps-footer-columns">
+                <div class="pps-footer-item">
+                    <h3>Who we are</h3>
+                    <p>Park Pal Swift offers seamless automated parking solutions that are efficient, reliable, and customer-focused.</p>
+                </div>
+                <div class="pps-footer-item">
+                    <h3>Opening Hours</h3>
+                    <p>Monday-Friday: 8:30AM - 5:00PM</p>
+                    <p>Saturday: 8:30AM - 1:00PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+                <div class="pps-footer-item">
+                    <h3>Important Links</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="pps-footer-item">
+                    <h3>Recent Posts</h3>
+                    <ul>
+                        <li><a href="#">New Automated Features for 2023</a></li>
+                        <li><a href="#">Award-Winning Service Recognition</a></li>
+                        <li><a href="#">Expansion into New Locations</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="pps-footer-bottom">
+            <p>&copy; 2024 Park Pal Swift. All rights reserved | Solution by YourCompany</p>
+        </div>
+    </footer>
+</body>
+</html>
