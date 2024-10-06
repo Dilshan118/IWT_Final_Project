@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park Pal Swift</title>
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="homestyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="pps-header">
+            <div class="pps-logo">Park Pal Swift</div>
+            <nav class="pps-nav">
+                <ul class="pps-nav-list">
+   
+                    <li><a href="../../Dilshan/register & sign in/login.html" class="pps-nav-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<br><br>
+    <section id="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to Park Pal Swift</h1>
+            <p>Effortless parking reservations at your fingertips. Say goodbye to the hassle of finding a parking space.</p>
+            <a href="../../Hansi/userprofile/index.php" class="hero-btn">Get Start</a>
+        </div>
+    </section>
+
+    <section id="photo-gallery">
+        <h2>Our Services in Action</h2>
+
+        <div class="gallery-container">
+            <button class="arrow left-arrow" onclick="scrollGallery(-1)">&#10094;</button>
+            <div class="gallery" id="gallery">
+                <img src="images/img1.webp" alt="Convenient Parking">
+                <img src="images/img2.webp" alt="Efficient Parking Solutions">
+                <img src="images/img3.webp" alt="Park Pal Swift Locations">
+            </div>
+            <button class="arrow right-arrow" onclick="scrollGallery(1)">&#10095;</button>
+        </div>
+
+        <!-- Thumbnail Navigation -->
+        <div class="thumbnail-container">
+            <img src="images/img1.webp" alt="Thumbnail 1" onclick="goToSlide(0)">
+            <img src="images/img2.webp" alt="Thumbnail 2" onclick="goToSlide(1)">
+            <img src="images/img3.webp" alt="Thumbnail 3" onclick="goToSlide(2)">
+        </div>
+    </section>
+
+    <footer class="pps-footer-dark">
+        <div class="pps-footer-container">
+            <div class="pps-footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <div class="pps-footer-info">
+                <div class="pps-footer-item">
+                    <h3>Hotline 24 Hours</h3>
+                    <p>+94 779 560 462</p>
+                </div>
+                <div class="pps-footer-item">
+                    <h3>Send us a Mail</h3>
+                    <p>matrix@slmatrix.com</p>
+                </div>
+                <div class="pps-footer-item">
+                    <h3>Our Location</h3>
+                    <p>No 850, Bulugaha Junction, Kelaniya, Sri Lanka</p>
+                </div>
+            </div>
+
+            <div class="pps-footer-columns">
+                <div class="pps-footer-item">
+                    <h3>Who we are</h3>
+                    <p>Park Pal Swift offers seamless automated parking solutions that are efficient, reliable, and customer-focused.</p>
+                </div>
+
+                <div class="pps-footer-item">
+                    <h3>Opening Hours</h3>
+                    <p>Monday-Friday: 8:30AM - 5:00PM</p>
+                    <p>Saturday: 8:30AM - 1:00PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+
+                <div class="pps-footer-item">
+                    <h3>Important Links</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="pps-footer-item">
+                    <h3>Recent Posts</h3>
+                    <ul>
+                        <li><a href="#">New Automated Features for 2023</a></li>
+                        <li><a href="#">Award-Winning Service Recognition</a></li>
+                        <li><a href="#">Expansion into New Locations</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="pps-footer-bottom">
+            <p>&copy; 2024 Park Pal Swift. All rights reserved | Solution by Park Pal Swift</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
