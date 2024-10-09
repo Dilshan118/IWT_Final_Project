@@ -1,0 +1,230 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    background-image: url("../image/sandunback.webp");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding-top: 80px; /* Space for header */
+}
+
+/* Header Styles */
+.pps-header {
+    background-color: #2b3a45;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pps-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.pps-logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+}
+
+.pps-nav-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pps-nav-link {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 25px;
+    margin: 0 10px;
+    border-radius: 30px;
+    font-size: 11px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pps-nav-link:hover {
+    background-color: #1ABC9C;
+    color: #ffffff;
+}
+
+.pps-nav-btn {
+    background-color: #8a2020;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pps-nav-btn:hover {
+    background-color: #56b89a;
+}
+
+/* Profile Container */
+.profile-container {
+    max-width: 700px;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+#uph {
+    text-align: center;
+    font-size: 26px;
+    color: #2b3a45;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+th {
+    text-align: left;
+    color: #2b3a45;
+    font-weight: bold;
+}
+
+td {
+    text-align: right;
+    color: #333;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    min-width: 150px;
+}
+
+button:hover {
+    background-color: #16a085;
+}
+
+/* Footer Styles */
+.pps-footer-dark {
+    background-color: #2b3a45;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.pps-footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pps-footer-social a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.pps-footer-social a:hover {
+    color: #7ae1c4;
+}
+
+.pps-footer-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.pps-footer-item {
+    flex: 1;
+    margin: 20px;
+}
+
+.pps-footer-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #7ae1c4;
+}
+
+.pps-footer-item p, .pps-footer-item ul, .pps-footer-item li {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.pps-footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pps-footer-bottom {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 20px;
+}
+
+.pps-footer-columns ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pps-footer-columns ul li {
+    margin-bottom: 10px;
+}
+
+.pps-footer-columns ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.pps-footer-columns ul li a:hover {
+    color: #2218d4;
+}

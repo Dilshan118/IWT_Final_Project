@@ -1,0 +1,433 @@
+body {
+    background-image: url("images/parking2.webp");
+    font-family: Arial, sans-serif;
+    background-color: rgb(125, 139, 139);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+}
+
+/* Header Styling */
+.pps-header {
+    background: linear-gradient(90deg, #2C3E50 0%, #1C2833 100%);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.pps-container {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pps-logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.pps-nav {
+    display: flex;
+}
+
+.pps-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.pps-nav-link {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 25px;
+    margin: 0 10px;
+    border-radius: 30px;
+    font-size: 13px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pps-nav-link:hover {
+    background-color: #1ABC9C;
+    color: #ffffff;
+}
+
+.pps-nav-btn {
+    
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+
+.pps-nav-btn:hover {
+    background-color: #C0392B;
+}
+
+
+/* Footer Styles */
+.pps-footer-dark {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pps-footer-container {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pps-footer-social {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pps-footer-social a {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 10px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.pps-footer-social a:hover {
+    color: #1ABC9C;
+}
+
+.pps-footer-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.pps-footer-info .pps-footer-item {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.pps-footer-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #1ABC9C;
+}
+
+.pps-footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pps-footer-item {
+    width: 22%;
+}
+
+.pps-footer-item h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #1ABC9C;
+}
+
+.pps-footer-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #BDC3C7;
+}
+
+.pps-footer-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pps-footer-item ul li {
+    margin-bottom: 10px;
+}
+
+.pps-footer-item ul li a {
+    color: #BDC3C7;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.pps-footer-item ul li a:hover {
+    color: #1ABC9C;
+}
+
+.pps-footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #222;
+    font-size: 14px;
+    color: #BDC3C7;
+}
+
+.pps-footer-bottom a {
+    color: #1ABC9C;
+    text-decoration: none;
+}
+
+.pps-footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .pps-nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .pps-nav-link {
+        margin: 5px 0;
+    }
+    
+    .pps-footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pps-footer-right {
+        margin-top: 10px;
+    }
+
+    .pps-main h1 {
+        font-size: 36px;
+    }
+
+    .pps-main-btn {
+        padding: 12px 30px;
+        font-size: 18px;
+    }
+}
+
+
+h1 {
+    color: black;
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+fieldset {
+    border: 2px solid #ccc;
+    padding: 50px;
+    margin: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+}
+
+legend {
+    font-size: 18px;
+    color: #333;
+    padding: 0 50px;
+}
+
+input[type="text"], input[type="email"], input[type="phone"], select {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"], input[type="reset"], button {
+    width: 150px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 5px;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover, button:hover {
+    background-color: #45a049;
+}
+
+
+button {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 5px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: red;
+}
+
+
+
+
+
+.profile-card {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+}
+
+.profile-card h2 {
+    color: #333;
+}
+
+.profile-card p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.profile-card button {
+    background-color: #007bff;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.profile-card button:hover {
+    background-color: #0056b3;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#head{
+    
+     text-align: center;
+     margin-bottom: 20px;
+     font-size: 30px;
+}
+
+
+.btn1 {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+    font-size: 0.8em;
+}
+#para {
+    color:brown;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+#para1{
+    margin: 10px 0;
+    font-size: 1.2em;
+    color:black;
+}
+
+.btn1:hover {
+    background-color: #003d7a;
+}
+
+.team {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.team h2 {
+    font-size: 1.8em;
+    color:black;
+}
+
+.info-display {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    min-width: 300px;
+}
+
+.team-photo {
+    width: 150px;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 50%;
+}
+
+p {
+    font-size: 1em;
+    color: #555;
+}
+
+hr {
+    border: 0;
+    height: 3px;
+    background-color: whitesmoke;
+    
+}
+
+.about-section {
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+}
+
+.text-section {
+    width: 60%;
+}
+
+.image-section {
+    width: 35%;
+    text-align: center;
+}
+
+#about-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+

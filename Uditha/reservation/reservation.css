@@ -1,0 +1,149 @@
+body {
+    background-color: #e0f7fa; 
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    background-color: #222; 
+    color: #fff; 
+    padding: 20px;
+    transition: background-color 0.3s;
+}
+
+header:hover, footer:hover {
+    background-color: #333; 
+}
+
+.header-content, .footer-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+header nav a {
+    color: #fff; 
+    margin: 0 15px;
+    text-decoration: none; 
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #81d4fa; 
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #00796b;}
+
+.block-selector {
+    margin: 20px 0;
+}
+
+.block-button {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.block-button:hover {
+    background-color: #005f57; 
+}
+
+.parking-lot {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); 
+    gap: 5px; 
+    margin: 20px 0;
+    display: none;
+}
+
+.parking-spot {
+    background-color: #424242; 
+    border: 2px solid #616161; /* Slightly lighter gray border */
+    border-radius: 5px;
+    position: relative;
+    transition: background-color 0.3s, transform 0.3s;
+    height: 80px; 
+}
+
+.parking-spot:hover {
+    background-color: #616161; 
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.parking-spot.selected {
+    background-color: #ff5252; 
+    border-color: #d50000; 
+}
+
+.spot-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-weight: bold;
+}
+
+.reservation-form {
+    background-color: #ffffff; 
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.reservation-form:hover {
+    transform: scale(1.02); 
+}
+
+.reservation-form input, .reservation-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.reservation-form button {
+    background-color: #00796b; 
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.reservation-form button:hover {
+    background-color: #005f57; 
+}
+
+button{
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005f57;
+}

@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.form-title {
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group input, .input-group textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+}
+.input-group i {
+  position: relative;
+  
+
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+.delete-btn {
+  background-color: #e74c3c; /* Red background */
+  color: white; /* White text */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+.edit-btn {
+  background-color: #1e33ba; /* Red background */
+  color: white; /* White text */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+#faq-section {
+  width: 80%;
+  margin: 20px auto;
+}
+
+#faq-btn{
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin: 20px auto;
+  margin-block: auto;
+  text-align: right;
+  left: 170px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 165px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
