@@ -83,7 +83,7 @@
                          <li><a href="../../Uditha/reservation/reservation.php" class="pps-nav-link">Reservation</a></li>
                          <li><a href="../../Imasha/vehicle registration/Register.php" class="pps-nav-link">Registration</a></li>
                          <li><a href="../../Sandun/payment/index.php" class="pps-nav-link">Payment</a></li>
-                         <li><a href="../../hansi/userprofile/logout.php" class="pps-nav-btn">Log Out</a></li>
+                         <li><a href="../../hansi/userprofile/logout.php" class="pps-nav-btn">LogOut</a></li>
                          <li><a href="../../hansi/userprofile/read.php" class="pps-nav-btn">Profile</a></li>
 
                     </ul>
@@ -130,7 +130,7 @@
 
                     <div class="input-group">
                         <label for="NIC">NIC :</label><br />
-                        <input type="text" name="NIC" class="NIC" value="<?php echo $row['NIC']; ?>"><br /><br />
+                        <input type="text" name="NIC" class="NIC" placeholder="123456789V" pattern = "[0-9]{9}+[Vv]{1}"value="<?php echo $row['NIC']; ?>"><br /><br />
                     </div>
 
                     <div class="input-group">

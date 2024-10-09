@@ -1,22 +1,38 @@
-// Function to load the FAQ content dynamically
 function loadFAQ() 
 {
-  const faqContent = document.getElementById('faq-content-para');
-  faqContent.innerHTML = `
-    <h3>1. What is the parking duration limit?</h3>
-    <p>The parking duration is limited to 3 hours for non-residents. Longer durations require a permit.</p>
+  var faqs = {};  
+  faqs["01.How can I reserve a parking spot?"] = "You can reserve a spot through our online booking system.";
+  faqs["02.What if I need to cancel my reservation?"] = "You can cancel your reservation 24 hours in advance without any charges.";
+  faqs["03.Are there electric vehicle charging stations available?"] = "Yes, we have charging stations for electric vehicles.";
+  faqs["04.Is there a monthly parking subscription?"] = "Yes, we offer varius subscription packages.";
+  faqs["05.What are your parking facility hours?"] = "We are open 24/7 for parking services.";
+  faqs["06.Can I reserve multiple parking spots at once?"] = "Yes, you can reserve multiple spots depending on availability.";
+  faqs["07.Do you offer valet parking?"] = "Yes, valet parking services are available from 8 AM to 10 PM.";
+  faqs["08.What is the maximum vehicle height allowed?"] = "The maximum vehicle height allowed is 2.1 meters.";
+  faqs["09.Is there security for the parking lot?"] = "Yes, our parking lot is monitored 24/7 with CCTV and security personnel.";
 
-    <h3>2. How do I get a parking permit?</h3>
-    <p>You can apply for a parking permit at the office or through the online application form available on the parking page.</p>
+  var list = "";  
 
-    <h3>3. What are the parking fees?</h3>
-    <p>Parking fees vary depending on the duration and the type of vehicle. Please contact the office for specific rates.</p>
+  for (var question in faqs) 
+  {
+    list += "<strong>" + question + "</strong><br>" + faqs[question] + "<br><br>"; 
+  }
 
-    <h3>4. Is parking available for larger vehicles like trucks or vans?</h3>
-    <p>Yes, but there are designated areas for larger vehicles. Please inquire at the parking office for details.</p>
+  document.getElementById("faq-content-para").innerHTML=list;
+}
 
-    <h3>5. Who do I contact for further inquiries?</h3>
-    <p>For additional questions, you can contact the parking office via email at parking@domain.com or call us at 123-456-7890.</p>
-  `;
+
+//functions for checking the privacy and tearms check box
+function checkLength(input)
+{
+  const phoneError = document.getElementById('phone-error');
+  if (input.value.length > 10)
+  {
+    phoneError.textContent = 'Maximum length is 10 characters.';
+  }
+  else
+  {
+    phoneError.textContent='';
+  }
 }
 

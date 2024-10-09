@@ -20,9 +20,9 @@ if (isset($_POST['submit-inquiry']))
 
   if ($conn->query($sql) === TRUE)
   {
-    echo "<script>alert('New inquiry submitted successfully.')</script>";
+    echo "<script>alert('New inquiry submitted successfully.');
+    window.location.href='index.php'</script>";
 
-    header('Location: index.php'); // Redirect back to the main page after submission
     exit();
   } 
   else 

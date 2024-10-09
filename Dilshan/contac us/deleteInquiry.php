@@ -9,7 +9,8 @@ if (isset($_GET['delete'])) {
   $sql = "DELETE FROM inquiries WHERE id = $id";
 
   if ($conn->query($sql) === TRUE) {
-    header('Location: index.php'); // Redirect back to main page after deletion
+    echo "<script>alert('Successfully!');
+    window.location.href='index.php'</script>";
     exit();
   } else {
     echo "Error deleting inquiry: " . $conn->error;

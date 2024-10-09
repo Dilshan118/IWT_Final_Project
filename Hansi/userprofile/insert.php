@@ -19,10 +19,8 @@ $sql = "INSERT INTO ureg (UserName, FullName, Gender, MobileNumber, Email, NIC, 
 
 if($con -> query($sql))
 {
-    //$last_id = $con ->insert_id;//get userid
 
-    //redirect to read.php
-    header("Location:../../Dilshan/register & sign in/login.html");
+    header("Location:../../Dilshan/register & sign in/login.html");//redirect
     exit();
 }
 

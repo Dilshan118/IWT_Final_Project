@@ -114,7 +114,7 @@ function loadData(id){
                     pkgh.innerHTML="3Months Package";
                     pkgdes1.innerHTML="The 3-Month Package is ideal for those seeking a longer-term parking solution without committing to an entire year. This package is perfect for seasonal workers, extended travelers, or anyone who needs a guaranteed parking spot for three months. With this package, you enjoy uninterrupted parking access for 90 days, ensuring you never have to worry about daily reservations. Benefit from the convenience of having a reserved parking space, cost savings compared to monthly rates, and full flexibility to manage your parking needs through our online platform. Choose the 3-Month Package and experience stress-free parking for the entire season!<br>";
                     
-                    var pkgcontent =["Enjoy unlimited access to a reserved parking spot for 7 days.","Skip the hassle of daily bookings, ensuring you always have a space available.","Easily manage and modify your parking preferences throughout the week via our user-friendly online platform."];
+                    var pkgcontent =["Enjoy unlimited access to a reserved parking spot for 3months days.","Skip the hassle of daily bookings, ensuring you always have a space available.","Easily manage and modify your parking preferences throughout the 3months via our user-friendly online platform."];
                     
                     let M3content = "<ul>";
 

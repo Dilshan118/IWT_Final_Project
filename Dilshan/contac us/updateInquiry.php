@@ -72,7 +72,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     if ($conn->query($sql) === TRUE) 
     {
         // Redirect back to index.php with success message
-        header('Location: index.php?success=1');
+        echo "<script>alert('Successfully!');
+        window.location.href='index.php?success=1'</script>";
         exit();
     } 
     else 

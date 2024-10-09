@@ -11,6 +11,11 @@ include('db_connection.php');
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="stylesHeaderFooter.css">
   <script src="faq.js" defer></script> <!-- Linking to the external FAQ JavaScript file -->
+  <script>
+        function enableButton() {
+            document.getElementById("submit").disabled = !document.getElementById("privacy").checked;
+        }
+  </script>
 </head>
 <body>
 <header>
@@ -26,7 +31,7 @@ include('db_connection.php');
                          <li><a href="../../Uditha/reservation/reservation.php" class="pps-nav-link">Reservation</a></li>
                          <li><a href="../../Imasha/vehicle registration/Register.php" class="pps-nav-link">Registration</a></li>
                          <li><a href="../../Sandun/payment/index.php" class="pps-nav-link">Payment</a></li>
-                         <li><a href="../../hansi/userprofile/logout.php" class="pps-nav-btn">Log Out</a></li>
+                         <li><a href="../../hansi/userprofile/logout.php" class="pps-nav-btn">LogOut</a></li>
                          <li><a href="../../hansi/userprofile/read.php" class="pps-nav-btn">Profile</a></li>
                      </ul>
                  </nav>
@@ -51,12 +56,12 @@ include('db_connection.php');
 
         <div class="input-group">
           <i class="fas fa-envelope"></i>
-          <input type="email" name="email" id="email" placeholder="Email" required>
+          <input type="email" name="email" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
         </div>
 
         <div class="input-group">
           <i class="fas fa-phone"></i>
-          <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+          <input type="tel" name="phone" id="phone" placeholder="Phone Number" maxlength = "10" required>
         </div>
 
         <div class="input-group">
@@ -79,7 +84,12 @@ include('db_connection.php');
           <textarea name="comments" id="comments" rows="4" placeholder="Type your inquiry here"></textarea>
         </div>
 
-        <input type="submit" class="btn" id="submit" name="submit-inquiry" value="Submit Inquiry">
+        <div class="input-group">
+          <input type="checkbox" name="privacy" id="privacy" class="privacy" onclick="enableButton()">
+          <label for="privacy">Accept Privacy & Policy</label><br /><br />
+        </div>
+
+        <input type="submit" class="btn" id="submit" name="submit-inquiry" value="Submit Inquiry" disabled >
 
       </form>
     </div>
@@ -89,17 +99,17 @@ include('db_connection.php');
     <button class = "btn" type = "button" id = "faq-btn" onclick = "loadFAQ()">FAQ</button>
   </div>
 
-      <!-- Hidden FAQ section that will be shown using JavaScript -->
+      <!--FAQ section-->
  <div id="faq-section">
     <h3>Frequently Asked Questions</h3>
     <div id="faq-content">
     <p><h4 id="faq-content-para">Click on the FAQ button to view the frequintly asked Questions</h4></P>
+    <img src="img/faqimg1.webp" alt="faq-img" class="faq-img" id="faq-img1">
     </div>
  </div>
 
 
-
- 
+<!--footer-->
  <footer class="pps-footer-dark">
         <div class="pps-footer-container">
             <div class="pps-footer-social">

@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "ISDM_Final_DB";
+$dbname = "isdm_final_db";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

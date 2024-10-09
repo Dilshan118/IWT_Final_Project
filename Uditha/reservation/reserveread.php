@@ -135,7 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete'])) {
                          <li><a href="../../Uditha/reservation/reservation.php" class="pps-nav-link">Reservation</a></li>
                          <li><a href="../../Imasha/vehicle registration/Register.php" class="pps-nav-link">Vehicle Registration</a></li>
                          <li><a href="../../Sandun/payment/index.php" class="pps-nav-link">Payment</a></li>
-                         <li><a href="../../hansi/userprofile/logout.php" class="pps-nav-btn">Log Out</a></li>
+                         <li><a href="../../hansi/userprofile/logout.php" class="pps-nav-btn">LogOut</a></li>
                          <li><a href="../../hansi/userprofile/read.php" class="pps-nav-btn">User Profile</a></li>
                 </ul>
             </nav>

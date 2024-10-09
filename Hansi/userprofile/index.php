@@ -81,12 +81,12 @@
                     <div class="input-group">
                         <label for="mail">E-mail :</label><br />
                         <input type="email" name="mail" class="mail" placeholder="abc@gmail.com"
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"><br /><br />
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" ><br /><br />
                     </div>
 
                     <div class="input-group">
                         <label for="NIC">NIC :</label><br />
-                        <input type="text" name="NIC" class="NIC"><br /><br />
+                        <input type="text" name="NIC" class="NIC" placeholder="123456789V" pattern = "[0-9]{9}+[Vv]{1}"><br /><br />
                     </div>
 
                     <div class="input-group">
@@ -117,7 +117,7 @@
                     </div>
 
                     <div class="input-group">
-                        <input type="submit" id="Submit"  name="Submit" class="Submit" value="Submit">
+                        <input type="Submit" id="Submit"  name="Submit" class="Submit" value="Submit" disabled>
                     </div> 
                 </form>
             </fieldset>

@@ -4,7 +4,7 @@
 $servername = "localhost";
 $username = "root";  // Your MySQL username
 $password = "";  // Your MySQL password
-$dbname = "ISDM_Final_DB";  // The name of your database
+$dbname = "isdm_final_db";  // The name of your database
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
